@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "887092365668",
+    "project_id": "rk-gallery-stationery",
+    "storage_bucket": "rk-gallery-stationery.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887092365668:android:303069625ec9b4e13c5271",
+        "android_client_info": {
+          "package_name": "com.aistudio.rkgallery.jmtkpx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsPlTUSsbrBJPO0KcSxNrK_PIG645EU1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
