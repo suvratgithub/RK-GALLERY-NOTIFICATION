@@ -1,0 +1,6 @@
+{
+  "name": "R K Gallery & Stationers",
+  "description": "Cyber Cafe, Stationery, 300+ Online Services, Job Alerts, and Direct Contact for R K Gallery & Stationers in Jamtara, MP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

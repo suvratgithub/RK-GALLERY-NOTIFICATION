@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">R K Gallery</string>
+    <string name="shop_full_name">R K Gallery &amp; Stationers</string>
+    <string name="shop_tagline">Cyber Cafe • Stationery • 300+ Online Services</string>
+    <string name="shop_owner">Pradeep Kanojiya</string>
+    <string name="shop_address">Shop No.1, Gour Nadi, near Jabalpur, Bilhari, Jabalpur, Jamtara, Madhya Pradesh 482021</string>
+    <string name="shop_hours">Monday – Sunday • 9:00 AM – 9:00 PM</string>
+    <string name="shop_phone">091798 18444</string>
+    <string name="shop_rating">4.8 ★ Google Rating</string>
+    <string name="instagram_handle">\@rk_gallery_and_stationery_jbp</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_services">Services</string>
+    <string name="nav_alerts">Alerts</string>
+    <string name="nav_contact">Contact</string>
+    <string name="notif_channel_name">Job &amp; Yojana Alerts</string>
+    <string name="notif_channel_desc">Daily notifications for MP &amp; Central Govt jobs, admit cards, results, and schemes</string>
+</resources>

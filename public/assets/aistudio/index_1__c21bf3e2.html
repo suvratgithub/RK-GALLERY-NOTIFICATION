@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>R K Gallery & Stationers | Cyber Cafe | Jamtara, MP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary:#1a237e; --accent:#ff6f00; --cyan:#0097a7;
+      --green:#1b8a4a; --light:#f5f7ff; --text:#2d2d2d;
+      --muted:#6c757d; --shadow:0 4px 24px rgba(26,35,126,.1); --radius:14px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Poppins',sans-serif;color:var(--text);background:#fff;}
+
+    /* NAV */
+    nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(255,255,255,.97);
+      backdrop-filter:blur(12px);box-shadow:0 2px 16px rgba(26,35,126,.08);
+      display:flex;align-items:center;justify-content:space-between;padding:0 4%;height:68px;}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-img{height:50px;width:50px;border-radius:10px;object-fit:contain;}
+    .logo-text{font-size:1rem;font-weight:700;color:var(--primary);line-height:1.2;}
+    .logo-sub{font-size:.65rem;color:var(--accent);font-weight:600;letter-spacing:.5px;}
+    .nav-links{display:flex;gap:1.4rem;list-style:none;}
+    .nav-links a{text-decoration:none;color:var(--text);font-weight:500;font-size:.82rem;
+      transition:color .2s;position:relative;}
+    .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;
+      height:2px;background:var(--accent);transition:width .3s;}
+    .nav-links a:hover::after{width:100%;}
+    .nav-links a:hover{color:var(--accent);}
+    .nav-cta{background:var(--accent)!important;color:#fff!important;
+      padding:7px 16px;border-radius:50px;font-weight:600!important;}
+    .nav-cta::after{display:none!important;}
+    .hamburger{display:none;cursor:pointer;font-size:1.5rem;color:var(--primary);}
+    .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;z-index:998;
+      background:#fff;padding:1rem 5%;box-shadow:0 8px 24px rgba(0,0,0,.1);
+      flex-direction:column;gap:.7rem;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{text-decoration:none;color:var(--text);font-weight:500;
+      font-size:.9rem;padding:7px 0;border-bottom:1px solid #f0f0f0;}
+
+    /* HERO */
+    .hero{min-height:100vh;padding:100px 4% 60px;
+      background:linear-gradient(135deg,#e8eaf6 0%,#fff8f0 50%,#e0f7fa 100%);
+      display:flex;align-items:center;justify-content:space-between;gap:2rem;position:relative;}
+    .hero-content{flex:1;max-width:580px;}
+    .badge{display:inline-flex;align-items:center;gap:7px;
+      background:rgba(255,111,0,.12);color:var(--accent);
+      padding:5px 14px;border-radius:50px;font-size:.76rem;font-weight:600;
+      margin-bottom:1rem;letter-spacing:.5px;}
+    .hero h1{font-size:clamp(1.8rem,3.5vw,2.9rem);font-weight:800;
+      color:var(--primary);line-height:1.18;margin-bottom:.9rem;}
+    .hero h1 span{color:var(--accent);}
+    .hero p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:1.6rem;max-width:470px;}
+    .hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:2rem;}
+    .btn-p{background:var(--primary);color:#fff;padding:12px 24px;border-radius:50px;
+      font-weight:600;text-decoration:none;font-size:.88rem;
+      transition:transform .2s,box-shadow .2s;display:inline-flex;align-items:center;gap:7px;}
+    .btn-p:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(26,35,126,.35);}
+    .btn-o{border:2px solid var(--primary);color:var(--primary);padding:10px 22px;
+      border-radius:50px;font-weight:600;text-decoration:none;font-size:.88rem;
+      transition:all .2s;display:inline-flex;align-items:center;gap:7px;}
+    .btn-o:hover{background:var(--primary);color:#fff;}
+    .btn-wa{background:#25D366;color:#fff;padding:12px 24px;border-radius:50px;
+      font-weight:600;text-decoration:none;font-size:.88rem;
+      transition:transform .2s;display:inline-flex;align-items:center;gap:7px;}
+    .btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.4);}
+    .btn-wag{background:linear-gradient(135deg,#128C7E,#25D366);color:#fff;
+      padding:12px 24px;border-radius:50px;font-weight:600;text-decoration:none;
+      font-size:.88rem;transition:transform .2s;display:inline-flex;align-items:center;gap:7px;}
+    .btn-wag:hover{transform:translateY(-2px);}
+    .hero-stats{display:flex;gap:1.8rem;flex-wrap:wrap;}
+    .stat .stat-num{font-size:1.6rem;font-weight:800;color:var(--primary);}
+    .stat .stat-label{font-size:.72rem;color:var(--muted);font-weight:500;}
+    .hero-visual{flex:1;display:flex;justify-content:center;}
+    .hero-card{background:#fff;border-radius:24px;box-shadow:var(--shadow);
+      padding:1.6rem;max-width:320px;width:100%;position:relative;}
+    .floating-badge{position:absolute;top:-12px;right:-12px;background:var(--accent);
+      color:#fff;padding:5px 12px;border-radius:50px;font-weight:700;
+      font-size:.75rem;box-shadow:0 4px 16px rgba(255,111,0,.4);}
+    .hero-card-icon{width:60px;height:60px;border-radius:14px;
+      background:linear-gradient(135deg,var(--primary),#5c6bc0);
+      display:flex;align-items:center;justify-content:center;
+      color:#fff;font-size:1.6rem;margin-bottom:.9rem;}
+    .hero-card h3{font-size:.95rem;font-weight:700;color:var(--primary);margin-bottom:.4rem;}
+    .hero-card p{font-size:.8rem;color:var(--muted);line-height:1.6;}
+    .stars{color:#ffc107;font-size:.9rem;margin:.7rem 0 .2rem;}
+    .info-pills{display:flex;flex-direction:column;gap:7px;margin-top:.9rem;}
+    .pill{display:flex;align-items:center;gap:9px;background:var(--light);
+      padding:7px 11px;border-radius:9px;font-size:.77rem;font-weight:500;}
+    .pill i{color:var(--accent);font-size:.8rem;width:13px;}
+    .pill.c{background:rgba(0,151,167,.08);}
+    .pill.c i{color:var(--cyan);}
+    .pill.g{background:rgba(27,138,74,.08);}
+    .pill.g i{color:var(--green);}
+
+    /* SECTION COMMONS */
+    section{padding:70px 4%;}
+    .section-tag{display:inline-block;background:rgba(26,35,126,.08);color:var(--primary);
+      padding:4px 13px;border-radius:50px;font-size:.72rem;font-weight:600;
+      letter-spacing:1px;text-transform:uppercase;margin-bottom:.8rem;}
+    .section-tag.c{background:rgba(0,151,167,.1);color:var(--cyan);}
+    .section-tag.g{background:rgba(27,138,74,.1);color:var(--green);}
+    .section-title{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:800;
+      color:var(--primary);line-height:1.25;margin-bottom:.7rem;}
+    .section-title span{color:var(--accent);}
+    .section-title span.c{color:var(--cyan);}
+    .section-sub{color:var(--muted);font-size:.9rem;max-width:530px;line-height:1.75;}
+
+    /* WA BANNER */
+    .wa-banner{background:linear-gradient(135deg,#075E54,#128C7E,#25D366);padding:0 4%;}
+    .wa-inner{display:flex;align-items:center;gap:1.4rem;padding:1.8rem 0;flex-wrap:wrap;}
+    .wa-icon{width:60px;height:60px;min-width:60px;border-radius:16px;
+      background:rgba(255,255,255,.18);display:flex;align-items:center;
+      justify-content:center;color:#fff;font-size:1.8rem;}
+    .wa-inner h3{font-size:1rem;font-weight:700;color:#fff;margin-bottom:.2rem;}
+    .wa-inner p{font-size:.82rem;color:rgba(255,255,255,.85);}
+    .wa-inner>div:nth-child(2){flex:1;}
+    .wa-btn{background:#fff;color:#128C7E;padding:11px 24px;border-radius:50px;
+      font-weight:700;text-decoration:none;font-size:.88rem;white-space:nowrap;
+      display:inline-flex;align-items:center;gap:7px;
+      transition:transform .2s,box-shadow .2s;}
+    .wa-btn:hover{transform:scale(1.05);}
+
+    /* ABOUT */
+    .about{background:var(--light);}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;
+      align-items:center;margin-top:2.5rem;}
+    .about-box{background:linear-gradient(135deg,var(--primary),#3949ab);
+      border-radius:24px;padding:2.5rem 2rem;text-align:center;color:#fff;
+      position:relative;overflow:hidden;}
+    .about-box::before{content:'';position:absolute;bottom:-40px;right:-40px;
+      width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.07);}
+    .about-box i{font-size:4rem;opacity:.9;margin-bottom:.8rem;display:block;}
+    .about-box h3{font-size:1.1rem;font-weight:700;margin-bottom:.4rem;}
+    .about-box p{font-size:.82rem;opacity:.82;line-height:1.6;}
+    .about-box .owner{margin-top:1.1rem;padding-top:1rem;
+      border-top:1px solid rgba(255,255,255,.2);}
+    .about-box .owner small{font-size:.72rem;opacity:.7;}
+    .about-box .owner strong{font-size:1rem;display:block;margin-top:.2rem;}
+    .about-yr{position:absolute;top:16px;right:16px;background:var(--accent);
+      padding:5px 11px;border-radius:9px;font-weight:700;font-size:.77rem;}
+    .about-pts{display:flex;flex-direction:column;gap:1rem;margin-top:1.2rem;}
+    .about-pt{display:flex;gap:.9rem;align-items:flex-start;}
+    .about-pt-icon{width:40px;height:40px;min-width:40px;border-radius:11px;
+      background:rgba(26,35,126,.08);display:flex;align-items:center;
+      justify-content:center;color:var(--primary);font-size:.95rem;}
+    .about-pt h4{font-size:.88rem;font-weight:600;margin-bottom:.15rem;}
+    .about-pt p{font-size:.8rem;color:var(--muted);line-height:1.6;}
+
+    /* STATIONERY */
+    .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:1.2rem;margin-top:2.5rem;}
+    .s-card{background:#fff;border-radius:var(--radius);padding:1.6rem 1.3rem;
+      box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;
+      border-top:4px solid transparent;}
+    .s-card:hover{transform:translateY(-7px);box-shadow:0 12px 32px rgba(26,35,126,.14);
+      border-top-color:var(--accent);}
+    .s-icon{width:48px;height:48px;border-radius:12px;
+      background:linear-gradient(135deg,var(--primary),#5c6bc0);
+      display:flex;align-items:center;justify-content:center;
+      color:#fff;font-size:1.2rem;margin-bottom:1rem;}
+    .s-card h3{font-size:.88rem;font-weight:700;margin-bottom:.3rem;color:var(--primary);}
+    .s-card p{font-size:.79rem;color:var(--muted);line-height:1.6;}
+
+    /* ══ SERVICES SECTION ══ */
+    .services-section{background:linear-gradient(135deg,#e8eaf6 0%,#f5f7ff 50%,#e0f7fa 100%);}
+    .services-count-bar{
+      display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+      background:#fff;border-radius:16px;padding:1rem 1.5rem;
+      box-shadow:var(--shadow);margin-top:2rem;margin-bottom:2rem;}
+    .count-item{display:flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:600;color:var(--primary);}
+    .count-item span{background:var(--accent);color:#fff;border-radius:50px;
+      padding:2px 10px;font-size:.75rem;font-weight:700;}
+    .count-item.c span{background:var(--cyan);}
+    .count-item.g span{background:var(--green);}
+
+    /* Category Filter Tabs */
+    .cat-tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem;}
+    .cat-tab{padding:7px 16px;border-radius:50px;border:2px solid #e0e4f0;
+      background:#fff;color:var(--muted);font-size:.78rem;font-weight:600;
+      cursor:pointer;transition:all .2s;font-family:inherit;}
+    .cat-tab:hover{border-color:var(--primary);color:var(--primary);}
+    .cat-tab.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+
+    /* Accordion */
+    .acc-wrap{display:flex;flex-direction:column;gap:.9rem;}
+    .acc-item{background:#fff;border-radius:16px;box-shadow:var(--shadow);overflow:hidden;}
+    .acc-head{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.4rem;
+      cursor:pointer;transition:background .2s;user-select:none;}
+    .acc-head:hover{background:#f8f9ff;}
+    .acc-head.open{background:linear-gradient(135deg,var(--primary),#3949ab);}
+    .acc-head.open .acc-title,.acc-head.open .acc-count,.acc-head.open .acc-num{color:#fff!important;}
+    .acc-head.open .acc-icon{background:rgba(255,255,255,.2);color:#fff;}
+    .acc-head.open .acc-arr{color:rgba(255,255,255,.8);transform:rotate(180deg);}
+    .acc-icon{width:42px;height:42px;min-width:42px;border-radius:11px;
+      background:rgba(26,35,126,.08);display:flex;align-items:center;
+      justify-content:center;font-size:1.1rem;color:var(--primary);
+      transition:all .3s;}
+    .acc-info{flex:1;}
+    .acc-title{font-size:.9rem;font-weight:700;color:var(--primary);line-height:1.3;}
+    .acc-count{font-size:.74rem;color:var(--muted);margin-top:.1rem;}
+    .acc-num{font-size:.72rem;font-weight:700;color:var(--accent);
+      background:rgba(255,111,0,.1);padding:3px 10px;border-radius:50px;white-space:nowrap;}
+    .acc-arr{color:var(--muted);font-size:.85rem;transition:transform .3s;}
+    .acc-body{display:none;padding:1rem 1.4rem 1.4rem;border-top:1px solid #f0f2fc;}
+    .acc-body.open{display:block;}
+    .service-tags{display:flex;flex-wrap:wrap;gap:.5rem;}
+    .stag{padding:5px 12px;background:var(--light);border-radius:50px;
+      font-size:.76rem;color:var(--text);font-weight:500;border:1px solid #e0e4f0;
+      transition:all .2s;cursor:default;}
+    .stag:hover{background:var(--primary);color:#fff;border-color:var(--primary);}
+    .stag.c:hover{background:var(--cyan);border-color:var(--cyan);}
+    .stag.g:hover{background:var(--green);border-color:var(--green);}
+
+    /* GALLERY */
+    .gallery{background:var(--light);}
+    .gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+      gap:1rem;margin-top:2.5rem;}
+    .gal-item{border-radius:var(--radius);aspect-ratio:1;
+      background:linear-gradient(135deg,var(--primary),#5c6bc0);
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;transition:transform .3s;overflow:hidden;}
+    .gal-item:hover{transform:scale(1.04);}
+    .gal-item:nth-child(2){background:linear-gradient(135deg,#e65100,#ff8f00);}
+    .gal-item:nth-child(3){background:linear-gradient(135deg,var(--cyan),#004d40);}
+    .gal-item:nth-child(4){background:linear-gradient(135deg,#880e4f,#e91e63);}
+    .gal-item:nth-child(5){background:linear-gradient(135deg,var(--green),#1b5e20);}
+    .gal-item:nth-child(6){background:linear-gradient(135deg,#37474f,#78909c);}
+    .gal-inner{text-align:center;color:#fff;padding:1.4rem;}
+    .gal-inner i{font-size:2.2rem;opacity:.9;margin-bottom:.6rem;display:block;}
+    .gal-inner span{font-size:.82rem;font-weight:600;}
+
+    /* REVIEWS */
+    .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:1.3rem;margin-top:2.5rem;}
+    .rev-card{background:#fff;border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);}
+    .t-stars{color:#ffc107;font-size:.9rem;margin-bottom:.6rem;}
+    .t-text{font-size:.85rem;color:var(--text);line-height:1.7;font-style:italic;margin-bottom:1rem;}
+    .t-auth{display:flex;align-items:center;gap:.7rem;}
+    .t-av{width:38px;height:38px;border-radius:50%;
+      background:linear-gradient(135deg,var(--primary),#5c6bc0);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;}
+    .t-name{font-weight:600;font-size:.85rem;}
+    .t-loc{font-size:.73rem;color:var(--muted);}
+
+    /* CONTACT */
+    .contact{background:var(--light);}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2.5rem;align-items:start;}
+    .c-info{display:flex;flex-direction:column;gap:1rem;}
+    .c-item{display:flex;gap:.9rem;align-items:flex-start;background:#fff;
+      padding:1rem 1.2rem;border-radius:var(--radius);box-shadow:var(--shadow);}
+    .c-icon{width:40px;height:40px;min-width:40px;border-radius:11px;background:var(--primary);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;}
+    .c-icon.c{background:var(--cyan);}
+    .c-icon.wa{background:#25D366;}
+    .c-item h4{font-size:.78rem;color:var(--muted);margin-bottom:.15rem;}
+    .c-item p,.c-item a{font-size:.88rem;font-weight:600;color:var(--text);text-decoration:none;}
+    .c-item a:hover{color:var(--accent);}
+    .c-form{background:#fff;border-radius:var(--radius);padding:1.6rem;box-shadow:var(--shadow);}
+    .c-form h3{font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:1.2rem;}
+    .fg{margin-bottom:1rem;}
+    .fg label{display:block;font-size:.79rem;font-weight:600;margin-bottom:.35rem;}
+    .fg input,.fg textarea,.fg select{width:100%;padding:9px 13px;border:2px solid #e8ecf4;
+      border-radius:9px;font-family:inherit;font-size:.85rem;color:var(--text);
+      outline:none;transition:border-color .2s;background:var(--light);}
+    .fg input:focus,.fg textarea:focus,.fg select:focus{
+      border-color:var(--primary);box-shadow:0 0 0 3px rgba(26,35,126,.07);}
+    .fg textarea{height:90px;resize:vertical;}
+    .fr{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
+    .btn-sub{width:100%;background:var(--primary);color:#fff;border:none;
+      padding:11px;border-radius:9px;font-family:inherit;font-size:.9rem;
+      font-weight:600;cursor:pointer;transition:all .3s;
+      display:flex;align-items:center;justify-content:center;gap:7px;}
+    .btn-sub:hover{background:var(--accent);transform:translateY(-2px);}
+
+    /* MAP */
+    .map-sec{padding:0 4% 70px;}
+    .map-box{background:linear-gradient(135deg,var(--primary),#3949ab);
+      border-radius:22px;padding:2.2rem 2.5rem;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:1.5rem;flex-wrap:wrap;color:#fff;}
+    .map-box h3{font-size:1.2rem;font-weight:700;margin-bottom:.3rem;}
+    .map-box p{font-size:.84rem;opacity:.85;line-height:1.6;max-width:400px;}
+    .map-btn{background:var(--accent);color:#fff;padding:11px 24px;border-radius:50px;
+      font-weight:600;text-decoration:none;font-size:.88rem;
+      display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
+      transition:transform .2s,box-shadow .2s;}
+    .map-btn:hover{transform:scale(1.05);}
+
+    /* FOOTER */
+    footer{background:var(--primary);color:rgba(255,255,255,.85);padding:45px 4% 20px;}
+    .ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem;}
+    .ft-desc{font-size:.82rem;opacity:.75;line-height:1.75;margin:.8rem 0;}
+    .soc{display:flex;gap:.6rem;margin-top:.5rem;}
+    .soc a{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.12);
+      display:flex;align-items:center;justify-content:center;color:#fff;
+      text-decoration:none;font-size:.85rem;transition:background .2s,transform .2s;}
+    .soc a:hover{background:var(--accent);transform:translateY(-3px);}
+    .soc a.wa:hover{background:#25D366;}
+    footer h4{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:.9rem;}
+    .ft-links{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .ft-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.82rem;
+      transition:color .2s;display:flex;align-items:center;gap:5px;}
+    .ft-links a:hover{color:var(--accent);}
+    .ft-links a::before{content:'›';font-size:.95rem;}
+    .ft-ci{display:flex;flex-direction:column;gap:.7rem;}
+    .ft-ci-item{display:flex;gap:.6rem;align-items:flex-start;
+      font-size:.79rem;color:rgba(255,255,255,.75);}
+    .ft-ci-item i{color:var(--accent);margin-top:2px;min-width:14px;}
+    .ft-ci-item a{color:rgba(255,255,255,.75);text-decoration:none;}
+    .ft-ci-item a:hover{color:#4dd0e1;}
+    .ft-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:1.2rem;
+      text-align:center;font-size:.77rem;opacity:.6;}
+
+    /* SCROLL TOP */
+    .scroll-top{position:fixed;bottom:22px;right:22px;z-index:999;width:44px;height:44px;
+      border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;
+      font-size:1rem;box-shadow:0 4px 16px rgba(255,111,0,.4);
+      display:none;align-items:center;justify-content:center;transition:transform .2s;}
+    .scroll-top.show{display:flex;}
+    .scroll-top:hover{transform:translateY(-3px);}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .nav-links{display:none;}.hamburger{display:block;}
+      .hero{flex-direction:column;text-align:center;padding-top:105px;}
+      .hero p{margin:0 auto 1.5rem;}.hero-btns{justify-content:center;}
+      .hero-stats{justify-content:center;}.hero-visual{width:100%;}
+      .about-grid,.contact-grid{grid-template-columns:1fr;}
+      .ft-grid{grid-template-columns:1fr;gap:1.8rem;}
+      .fr{grid-template-columns:1fr;}
+    }
+    @media(max-width:600px){
+      section{padding:55px 4%;}
+      .map-box{flex-direction:column;text-align:center;}
+      .wa-inner{flex-direction:column;text-align:center;}
+    }
+
+    /* ── LIVE NEWS TICKER ── */
+    .news-ticker {
+      background: #111b38; color: #fff; display: flex; align-items: center;
+      padding: 8px 4%; font-size: 0.8rem; overflow: hidden; gap: 12px;
+      margin-top: 68px; border-bottom: 2px solid var(--accent);
+    }
+    .ticker-badge {
+      background: #e53935; color: #fff; font-weight: 700; padding: 3px 9px;
+      border-radius: 4px; font-size: 0.72rem; display: inline-flex;
+      align-items: center; gap: 5px; flex-shrink: 0; animation: blink 1.5s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .ticker-content {
+      white-space: nowrap; overflow: hidden; position: relative; width: 100%;
+    }
+    .ticker-text {
+      display: inline-block; padding-left: 100%;
+      animation: tickerAnim 35s linear infinite; font-weight: 500;
+    }
+    .ticker-text:hover { animation-play-state: paused; }
+    @keyframes tickerAnim { 0%{transform:translate3d(0,0,0)} 100%{transform:translate3d(-100%,0,0)} }
+    .ticker-text span { margin-right: 32px; }
+    .ticker-text a { color: #ffca28; text-decoration: underline; margin-left: 4px; }
+
+    /* ── NOTIFICATION SUBSCRIBE BANNER ── */
+    .notif-sub-banner {
+      background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+      border-bottom: 1px solid #ffd180; padding: 12px 4%;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .notif-sub-info { display: flex; align-items: center; gap: 12px; }
+    .notif-bell-icon {
+      width: 40px; height: 40px; min-width: 40px; border-radius: 50%;
+      background: var(--accent); color: #fff; display: flex; align-items: center;
+      justify-content: center; font-size: 1.1rem; animation: ringBell 2s infinite;
+    }
+    @keyframes ringBell {
+      0%, 100% { transform: rotate(0); }
+      10%, 30% { transform: rotate(15deg); }
+      20%, 40% { transform: rotate(-15deg); }
+      50% { transform: rotate(0); }
+    }
+    .notif-sub-info h4 { font-size: 0.88rem; font-weight: 700; color: #b75300; margin-bottom: 2px; }
+    .notif-sub-info p { font-size: 0.77rem; color: #5d4037; }
+    .notif-sub-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-notif-allow {
+      background: var(--accent); color: #fff; border: none; padding: 8px 18px;
+      border-radius: 50px; font-weight: 700; font-size: 0.8rem; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 6px; transition: all .2s;
+    }
+    .btn-notif-allow:hover { background: #e65100; transform: translateY(-1px); }
+    .btn-notif-wa {
+      background: #25D366; color: #fff; border: none; padding: 8px 16px;
+      border-radius: 50px; font-weight: 700; font-size: 0.8rem; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+
+    /* ── JOB & UPDATE ALERTS SECTION ── */
+    .alerts-section {
+      background: #f8faff; padding: 60px 4%; border-top: 1px solid #eef2f9;
+    }
+    .alert-tabs {
+      display: flex; gap: 8px; flex-wrap: wrap; margin: 1.5rem 0 1.8rem;
+    }
+    .alert-tab {
+      padding: 7px 16px; border-radius: 50px; border: 1.5px solid #d9e2ec;
+      background: #fff; color: var(--muted); font-size: 0.8rem; font-weight: 600;
+      cursor: pointer; transition: all .2s; font-family: inherit;
+    }
+    .alert-tab:hover, .alert-tab.active {
+      background: var(--primary); color: #fff; border-color: var(--primary);
+    }
+    .job-cards-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+    .job-card {
+      background: #fff; border-radius: var(--radius); padding: 1.3rem;
+      box-shadow: 0 4px 18px rgba(26,35,126,0.07); border: 1px solid #e9edf5;
+      display: flex; flex-direction: column; justify-content: space-between;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .job-card:hover {
+      transform: translateY(-5px); box-shadow: 0 10px 28px rgba(26,35,126,0.12);
+    }
+    .job-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+    .job-badge {
+      font-size: 0.68rem; font-weight: 700; padding: 3px 8px; border-radius: 50px;
+      text-transform: uppercase;
+    }
+    .badge-job { background: #e8f5e9; color: #2e7d32; }
+    .badge-admit { background: #e3f2fd; color: #1565c0; }
+    .badge-result { background: #f3e5f5; color: #7b1fa2; }
+    .badge-scheme { background: #fff3e0; color: #e65100; }
+    .job-date { font-size: 0.72rem; color: #e53935; font-weight: 600; }
+    .job-title {
+      font-size: 0.95rem; font-weight: 700; color: var(--primary);
+      margin-bottom: 6px; line-height: 1.35;
+    }
+    .job-meta {
+      font-size: 0.78rem; color: var(--muted); line-height: 1.5; margin-bottom: 12px;
+    }
+    .job-meta span { display: block; margin-top: 3px; color: #37474f; font-weight: 500; }
+    .job-actions {
+      display: flex; gap: 8px; align-items: center; padding-top: 10px;
+      border-top: 1px solid #f0f2f8; margin-top: auto;
+    }
+    .btn-job-wa {
+      flex: 1; background: #25D366; color: #fff; padding: 8px 12px;
+      border-radius: 8px; font-size: 0.78rem; font-weight: 600; text-decoration: none;
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      transition: background .2s;
+    }
+    .btn-job-wa:hover { background: #1eb956; }
+    .btn-job-info {
+      background: var(--light); color: var(--primary); padding: 8px 12px;
+      border-radius: 8px; font-size: 0.78rem; font-weight: 600; text-decoration: none;
+      border: 1px solid #d9e2ec;
+    }
+
+    /* ── FLOATING NOTIFICATION BELL ── */
+    .notif-bell-float {
+      position: fixed; bottom: 22px; left: 22px; z-index: 999;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: linear-gradient(135deg, #ff6f00, #ff8f00);
+      color: #fff; border: none; cursor: pointer; font-size: 1.2rem;
+      box-shadow: 0 4px 18px rgba(255,111,0,.45);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .notif-bell-float:hover { transform: scale(1.1); }
+    .notif-bell-dot {
+      position: absolute; top: 0; right: 0; width: 14px; height: 14px;
+      background: #e53935; border: 2px solid #fff; border-radius: 50%;
+      animation: blink 1.5s infinite;
+    }
+
+    /* ── NOTIFICATION MODAL / TOAST ── */
+    .notif-toast {
+      position: fixed; bottom: 80px; left: 22px; z-index: 1000;
+      background: #fff; border-radius: 14px; padding: 14px 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.18); border-left: 5px solid var(--accent);
+      max-width: 320px; display: none; animation: slideUp .3s ease;
+    }
+    .notif-toast.show { display: block; }
+    @keyframes slideUp { from{opacity:0;transform:translateY(15px)} to{opacity:1;transform:translateY(0)} }
+    .notif-toast h4 { font-size: 0.88rem; color: var(--primary); margin-bottom: 4px; }
+    .notif-toast p { font-size: 0.76rem; color: var(--muted); margin-bottom: 10px; line-height: 1.4; }
+    .notif-toast-btns { display: flex; gap: 8px; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="logo">
+    <img class="logo-img" src="logo.png" alt="RK Gallery Logo"/>
+    <div>
+      <div class="logo-text">R K Gallery & Stationers</div>
+      <div class="logo-sub">Cyber Cafe • Online Services • Jamtara, MP</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#alerts" style="color:var(--accent);font-weight:700;"><i class="fas fa-bell"></i> Job Alerts</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#stationery">Stationery</a></li>
+    <li><a href="#allservices">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="toggleMenu()">🏠 Home</a>
+  <a href="#alerts" onclick="toggleMenu()" style="color:var(--accent);font-weight:700;">🔔 Job & Update Alerts</a>
+  <a href="#about" onclick="toggleMenu()">📖 About</a>
+  <a href="#stationery" onclick="toggleMenu()">✏️ Stationery</a>
+  <a href="#allservices" onclick="toggleMenu()">💻 Online Services</a>
+  <a href="#gallery" onclick="toggleMenu()">🖼️ Gallery</a>
+  <a href="#reviews" onclick="toggleMenu()">⭐ Reviews</a>
+  <a href="#contact" onclick="toggleMenu()">📞 Contact</a>
+</div>
+
+<!-- LIVE NEWS TICKER -->
+<div class="news-ticker">
+  <div class="ticker-badge"><i class="fas fa-bolt"></i> LIVE UPDATES</div>
+  <div class="ticker-content">
+    <div class="ticker-text">
+      <span>🚨 <strong>MP Police Bharti 2026:</strong> Form aane wale hain — zaroori dastavez taiyar rakhein! <a href="#alerts">Dekhein</a></span>
+      <span>🚨 <strong>SSC GD Constable 2026:</strong> Online form shuru ho gaye hain! R K Gallery par aakar form bharein.</span>
+      <span>🚨 <strong>Railway RPF SI & Constable:</strong> Bharti jaankari aur online aavedan uplabdh!</span>
+      <span>🚨 <strong>Ladli Behna Yojana:</strong> Agli kist ke liye e-KYC aur bank DBT turant karwayein.</span>
+      <span>🚨 <strong>Samagra ID e-KYC:</strong> Aadhar se link karwayein humari dukan par fast & easy.</span>
+    </div>
+  </div>
+</div>
+
+<!-- NOTIFICATION SUBSCRIBE BANNER -->
+<div class="notif-sub-banner" id="notifBanner">
+  <div class="notif-sub-info">
+    <div class="notif-bell-icon"><i class="fas fa-bell"></i></div>
+    <div>
+      <h4>🔔 Mobile Par Daily Job & Scheme Notifications Chahiye?</h4>
+      <p>Nayi sarkari bharti, admit card aur yojana ka alert seedha aapke mobile screen par aayega!</p>
+    </div>
+  </div>
+  <div class="notif-sub-btns">
+    <button class="btn-notif-allow" onclick="requestNotificationPermission()"><i class="fas fa-bell"></i> Mobile Alert On Karein</button>
+    <a href="https://chat.whatsapp.com/DnC0Umg3ME4BcOllzGwcHL" target="_blank" class="btn-notif-wa"><i class="fab fa-whatsapp"></i> WhatsApp Alert</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="badge"><i class="fas fa-store"></i> Jamtara Ka #1 Cyber Cafe & Store</div>
+    <h1>Gallery, Stationery &<br><span>300+ Online Services</span></h1>
+    <p>Aadhaar se lekar Passport tak, Job Form se lekar Bill Payment tak — har kaam ek hi jagah! Fast internet, expert staff, best prices.</p>
+    <div class="hero-btns">
+      <a href="#allservices" class="btn-p"><i class="fas fa-laptop"></i> Sabhi Services</a>
+      <a href="tel:09179818444" class="btn-o"><i class="fas fa-phone"></i> Call Now</a>
+      <a href="https://wa.me/919179818444" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://chat.whatsapp.com/DnC0Umg3ME4BcOllzGwcHL" class="btn-wag" target="_blank"><i class="fas fa-users"></i> Join Group</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">4.8⭐</div><div class="stat-label">Google Rating</div></div>
+      <div class="stat"><div class="stat-num">300+</div><div class="stat-label">Services</div></div>
+      <div class="stat"><div class="stat-num">21</div><div class="stat-label">Categories</div></div>
+      <div class="stat"><div class="stat-num">12 Hrs</div><div class="stat-label">Daily Open</div></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="floating-badge">⭐ 4.8 Rated</div>
+      <div class="hero-card-icon"><i class="fas fa-laptop-code"></i></div>
+      <h3>R K Gallery & Stationers</h3>
+      <p>Stationery + Cyber Cafe + 300+ Online Services</p>
+      <div class="stars">★★★★★</div>
+      <div style="font-size:.74rem;color:var(--muted);margin-bottom:.8rem;">4.8/5 — Google Reviews</div>
+      <div class="info-pills">
+        <div class="pill"><i class="fas fa-clock"></i> Subah 9:00 AM – Sham 9:00 PM</div>
+        <div class="pill"><i class="fas fa-map-marker-alt"></i> Shop No.1, Gour Nadi, Bilhari, Jabalpur</div>
+        <div class="pill"><i class="fas fa-phone"></i> 091798 18444</div>
+        <div class="pill c"><i class="fas fa-laptop"></i> Cyber Cafe & 300+ Online Services</div>
+        <div class="pill g"><i class="fas fa-user-tie"></i> Owner: Pradeep Kanojiya</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WA GROUP BANNER -->
+<div class="wa-banner">
+  <div class="wa-inner">
+    <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
+    <div>
+      <h3>Hamare WhatsApp Group Mein Judo! 📢</h3>
+      <p>Latest offers, service updates, aur sarkari notifications seedha WhatsApp par pao — Free!</p>
+    </div>
+    <a href="https://chat.whatsapp.com/DnC0Umg3ME4BcOllzGwcHL" target="_blank" class="wa-btn">
+      <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+    </a>
+  </div>
+</div>
+
+<!-- JOB & UPDATE ALERTS SECTION -->
+<section class="alerts-section" id="alerts">
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+    <div>
+      <span class="section-tag" style="background:rgba(255,111,0,0.12);color:var(--accent);">
+        <i class="fas fa-bell"></i> Daily Updates & Alerts
+      </span>
+      <h2 class="section-title">Nayi Bharti, Admit Card <span>& Yojana Alerts</span></h2>
+      <p class="section-sub">Madhya Pradesh aur Central Govt ki sabhi latest jobs, exam forms, admit card aur yojana updates yahan dekhein. Form bharne ke liye turant WhatsApp ya dukan par aao!</p>
+    </div>
+    <button class="btn-notif-allow" onclick="requestNotificationPermission()" style="padding:10px 22px;font-size:0.88rem;">
+      <i class="fas fa-bell"></i> Mobile Alert On Karein
+    </button>
+  </div>
+
+  <!-- Filter Tabs -->
+  <div class="alert-tabs">
+    <button class="alert-tab active" onclick="filterAlerts('all', this)">Sabhi Updates (All)</button>
+    <button class="alert-tab" onclick="filterAlerts('job', this)">🆕 Nayi Bharti (Jobs)</button>
+    <button class="alert-tab" onclick="filterAlerts('admit', this)">🎫 Admit Card</button>
+    <button class="alert-tab" onclick="filterAlerts('result', this)">📊 Result & Answer Key</button>
+    <button class="alert-tab" onclick="filterAlerts('scheme', this)">🏛️ Sarkari Yojana</button>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="job-cards-grid" id="alertsGrid">
+
+    <!-- Card 1 -->
+    <div class="job-card" data-category="job">
+      <div>
+        <div class="job-top">
+          <span class="job-badge badge-job">Nayi Bharti</span>
+          <span class="job-date">🔥 Last Date Jald</span>
+        </div>
+        <div class="job-title">MP Police Constable Recruitment 2026</div>
+        <div class="job-meta">
+          <strong>Pad:</strong> Constable (GD / Radio)<br>
+          <strong>Yogyata:</strong> 10th / 12th Pass<br>
+          <span>Aavedan humari shop par aakar bharein. Sabhi documents taiyar rakhein!</span>
+        </div>
+      </div>
+      <div class="job-actions">
+        <a href="https://wa.me/919179818444?text=Namaste%2C%20mujhe%20MP%20Police%20Constable%20form%20bharwana%20hai." target="_blank" class="btn-job-wa">
+          <i class="fab fa-whatsapp"></i> Form Bharein
+        </a>
+        <a href="tel:09179818444" class="btn-job-info"><i class="fas fa-phone"></i> Call</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="job-card" data-category="job">
+      <div>
+        <div class="job-top">
+          <span class="job-badge badge-job">Nayi Bharti</span>
+          <span class="job-date">🔥 Online Apply Open</span>
+        </div>
+        <div class="job-title">SSC GD Constable 2026 Recruitment</div>
+        <div class="job-meta">
+          <strong>Vibhag:</strong> BSF, CISF, CRPF, ITBP, SSB<br>
+          <strong>Yogyata:</strong> 10th Pass (High School)<br>
+          <span>Online form filling aur photo/signature resizing available.</span>
+        </div>
+      </div>
+      <div class="job-actions">
+        <a href="https://wa.me/919179818444?text=Namaste%2C%20mujhe%20SSC%20GD%20Constable%20form%20bharwana%20hai." target="_blank" class="btn-job-wa">
+          <i class="fab fa-whatsapp"></i> Form Bharein
+        </a>
+        <a href="tel:09179818444" class="btn-job-info"><i class="fas fa-phone"></i> Call</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="job-card" data-category="job">
+      <div>
+        <div class="job-top">
+          <span class="job-badge badge-job">Nayi Bharti</span>
+          <span class="job-date">🔥 Form Live</span>
+        </div>
+        <div class="job-title">Railway RPF Sub Inspector & Constable</div>
+        <div class="job-meta">
+          <strong>Vibhag:</strong> Indian Railways (RPF / RPSF)<br>
+          <strong>Yogyata:</strong> 10th Pass / Graduate<br>
+          <span>Railway aavedan humare cyber cafe se complete karwayein.</span>
+        </div>
+      </div>
+      <div class="job-actions">
+        <a href="https://wa.me/919179818444?text=Namaste%2C%20mujhe%20Railway%20RPF%20form%20bharwana%20hai." target="_blank" class="btn-job-wa">
+          <i class="fab fa-whatsapp"></i> Form Bharein
+        </a>
+        <a href="tel:09179818444" class="btn-job-info"><i class="fas fa-phone"></i> Call</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="job-card" data-category="admit">
+      <div>
+        <div class="job-top">
+          <span class="job-badge badge-admit">Admit Card</span>
+          <span class="job-date" style="color:#1565c0;">Download Available</span>
+        </div>
+        <div class="job-title">MPESB / Vyapam Exam Admit Card</div>
+        <div class="job-meta">
+          <strong>Service:</strong> Admit Card Download & Printout<br>
+          <strong>Subvidha:</strong> Color & Black/White Print, Lamination<br>
+          <span>Apna Application no. aur Date of Birth lekar shop par aayein.</span>
+        </div>
+      </div>
+      <div class="job-actions">
+        <a href="https://wa.me/919179818444?text=Namaste%2C%20mujhe%20Admit%20Card%20download%20karna%20hai." target="_blank" class="btn-job-wa">
+          <i class="fab fa-whatsapp"></i> Print Karwayein
+        </a>
+        <a href="tel:09179818444" class="btn-job-info"><i class="fas fa-phone"></i> Call</a>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="job-card" data-category="scheme">
+      <div>
+        <div class="job-top">
+          <span class="job-badge badge-scheme">Sarkari Yojana</span>
+          <span class="job-date" style="color:#e65100;">DBT & e-KYC Jaruri</span>
+        </div>
+        <div class="job-title">Ladli Behna Yojana e-KYC & Status</div>
+        <div class="job-meta">
+          <strong>Yojana:</strong> Mukhyamantri Ladli Behna Yojana MP<br>
+          <strong>Kaam:</strong> Samagra e-KYC, Aadhar Link, DBT Status Check<br>
+          <span>Aapki dukan par fast biometric & OTP e-KYC suvidha uplabdh.</span>
+        </div>
+      </div>
+      <div class="job-actions">
+        <a href="https://wa.me/919179818444?text=Namaste%2C%20mujhe%20Ladli%20Behna%20e-KYC%20karwana%20hai." target="_blank" class="btn-job-wa">
+          <i class="fab fa-whatsapp"></i> Sampark Karein
+        </a>
+        <a href="tel:09179818444" class="btn-job-info"><i class="fas fa-phone"></i> Call</a>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="job-card" data-category="result">
+      <div>
+        <div class="job-top">
+          <span class="job-badge badge-result">Result</span>
+          <span class="job-date" style="color:#7b1fa2;">Check & Print</span>
+        </div>
+        <div class="job-title">Sarkari Pariksha Result & Marksheet</div>
+        <div class="job-meta">
+          <strong>Service:</strong> Board / MPESB / SSC / Railway Results<br>
+          <strong>Subvidha:</strong> Result check karna aur Color Marksheet Print<br>
+          <span>Roll number lekar shop par aayein aur turant marksheet paayein.</span>
+        </div>
+      </div>
+      <div class="job-actions">
+        <a href="https://wa.me/919179818444?text=Namaste%2C%20mujhe%20Result%20check%20karwana%20hai." target="_blank" class="btn-job-wa">
+          <i class="fab fa-whatsapp"></i> Result Dekhein
+        </a>
+        <a href="tel:09179818444" class="btn-job-info"><i class="fas fa-phone"></i> Call</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <span class="section-tag">Hamare Baare Mein</span>
+  <h2 class="section-title">Jamtara Ka <span>Sabse Bharosemand</span> Store</h2>
+  <p class="section-sub">Ek hi chhat ke neeche — stationery, gallery, cyber cafe, aur 21 categories mein 300+ online services. Expert staff, fast internet, aur best prices.</p>
+  <div class="about-grid">
+    <div class="about-box">
+      <div class="about-yr">📍 Jamtara, MP</div>
+      <i class="fas fa-store"></i>
+      <h3>R K Gallery & Stationers</h3>
+      <p>Shop No. 1, Gour Nadi, near Jabalpur, Bilhari — Stationery se Cyber Cafe tak sab kuch ek jagah.</p>
+      <div class="owner">
+        <small>Shop Owner / Proprietor</small>
+        <strong>👤 Pradeep Kanojiya</strong>
+      </div>
+    </div>
+    <div>
+      <div class="about-pts">
+        <div class="about-pt">
+          <div class="about-pt-icon"><i class="fas fa-certificate"></i></div>
+          <div><h4>Quality Products</h4><p>Best brands ki stationery aur art supplies — har budget ke liye.</p></div>
+        </div>
+        <div class="about-pt">
+          <div class="about-pt-icon"><i class="fas fa-laptop"></i></div>
+          <div><h4>21 Categories, 300+ Services</h4><p>Aadhaar, PAN, Voter ID, Job Forms, Govt schemes — sab kuch yahan milta hai.</p></div>
+        </div>
+        <div class="about-pt">
+          <div class="about-pt-icon"><i class="fas fa-bolt"></i></div>
+          <div><h4>Fast & Reliable</h4><p>Fast internet connection, experienced staff — kaam jaldi hoga, bilkul sahi hoga.</p></div>
+        </div>
+        <div class="about-pt">
+          <div class="about-pt-icon"><i class="fas fa-clock"></i></div>
+          <div><h4>Subah 9 se Sham 9 Tak</h4><p>Poore 12 ghante khula — Monday se Sunday, bina appointment ke aao!</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATIONERY -->
+<section id="stationery">
+  <span class="section-tag">Stationery & Gallery</span>
+  <h2 class="section-title">Hamare <span>Products</span></h2>
+  <p class="section-sub">School se office tak, art se craft tak — sab kuch milega yahan hamare well-stocked store mein.</p>
+  <div class="stat-grid">
+    <div class="s-card"><div class="s-icon"><i class="fas fa-pencil-alt"></i></div><h3>Stationery Items</h3><p>Pens, pencils, markers, erasers, sharpeners, rulers — sab writing instruments.</p></div>
+    <div class="s-card"><div class="s-icon"><i class="fas fa-paint-brush"></i></div><h3>Art Supplies</h3><p>Sketch books, watercolors, oil pastels, canvases, aur professional art materials.</p></div>
+    <div class="s-card"><div class="s-icon"><i class="fas fa-book"></i></div><h3>Books & Notebooks</h3><p>Exercise books, registers, diaries, notebooks — har size aur ruling mein.</p></div>
+    <div class="s-card"><div class="s-icon"><i class="fas fa-print"></i></div><h3>Printing & Lamination</h3><p>Document print, photo print, lamination, photocopy — fast aur sasta.</p></div>
+    <div class="s-card"><div class="s-icon"><i class="fas fa-image"></i></div><h3>Gallery / Frames</h3><p>Photo frames, wall art, framing services, aur decorative items.</p></div>
+    <div class="s-card"><div class="s-icon"><i class="fas fa-box"></i></div><h3>Office Supplies</h3><p>Files, folders, staplers, tape, sticky notes — office ki sab zarooriyat.</p></div>
+  </div>
+</section>
+
+<!-- ALL SERVICES ACCORDION -->
+<section class="services-section" id="allservices">
+  <span class="section-tag c"><i class="fas fa-wifi"></i> Cyber Cafe & Online Services</span>
+  <h2 class="section-title">Sabhi <span class="c">300+ Services</span> — 21 Categories</h2>
+  <p class="section-sub">Neeche kisi bhi category ko click karo aur usme available sabhi services dekhein. Koi bhi kaam karana ho — seedha aao ya call karo!</p>
+
+  <div class="services-count-bar">
+    <div class="count-item"><i class="fas fa-th-list"></i> 21 Categories <span>Total</span></div>
+    <div class="count-item c"><i class="fas fa-cog"></i> 300+ Services <span class="c" style="background:var(--cyan)">Available</span></div>
+    <div class="count-item g"><i class="fas fa-clock"></i> 9 AM–9 PM <span style="background:var(--green)">Daily Open</span></div>
+  </div>
+
+  <div class="acc-wrap" id="accordion">
+
+    <!-- 1 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-file-alt"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">1. सरकारी दस्तावेज एवं प्रमाण पत्र</div>
+          <div class="acc-count">Government Documents & Certificates</div>
+        </div>
+        <div class="acc-num">13 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">आय प्रमाण पत्र (Income Certificate)</span>
+          <span class="stag">जाति प्रमाण पत्र (Caste Certificate)</span>
+          <span class="stag">मूल निवासी प्रमाण पत्र (Domicile Certificate)</span>
+          <span class="stag">जन्म प्रमाण पत्र (Birth Certificate)</span>
+          <span class="stag">मृत्यु प्रमाण पत्र (Death Certificate)</span>
+          <span class="stag">विवाह प्रमाण पत्र आवेदन</span>
+          <span class="stag">EWS Certificate</span>
+          <span class="stag">OBC Certificate</span>
+          <span class="stag">चरित्र प्रमाण पत्र आवेदन</span>
+          <span class="stag">पुलिस वेरिफिकेशन आवेदन</span>
+          <span class="stag">विकलांगता प्रमाण पत्र आवेदन</span>
+          <span class="stag">भूमि संबंधी ऑनलाइन आवेदन</span>
+          <span class="stag">स्थानीय निवासी संबंधी आवेदन</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-id-card"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">2. आधार कार्ड सेवाएँ</div>
+          <div class="acc-count">Aadhaar Card Services</div>
+        </div>
+        <div class="acc-num">10 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">E-Aadhaar Download</span>
+          <span class="stag">Aadhaar PVC Order</span>
+          <span class="stag">Aadhaar Print</span>
+          <span class="stag">Aadhaar Masking</span>
+          <span class="stag">Aadhaar Status Check</span>
+          <span class="stag">Aadhaar Appointment Booking</span>
+          <span class="stag">Aadhaar Update Centre Appointment</span>
+          <span class="stag">Aadhaar-PAN Link Status</span>
+          <span class="stag">Aadhaar Document Update Assistance</span>
+          <span class="stag">Aadhaar संबंधित शिकायत सहायता</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-id-badge"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">3. PAN Card सेवाएँ</div>
+          <div class="acc-count">PAN Card Services</div>
+        </div>
+        <div class="acc-num">10 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">New PAN Card Apply</span>
+          <span class="stag">Instant E-PAN</span>
+          <span class="stag">PAN Card Correction</span>
+          <span class="stag">PAN Reprint</span>
+          <span class="stag">PAN Download</span>
+          <span class="stag">PAN-Aadhaar Linking</span>
+          <span class="stag">PAN Application Status</span>
+          <span class="stag">Minor PAN Application</span>
+          <span class="stag">PAN Card Name Correction</span>
+          <span class="stag">PAN Card Address/Details Correction</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-vote-yea"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">4. वोटर ID एवं चुनाव सेवाएँ</div>
+          <div class="acc-count">Voter ID & Election Services</div>
+        </div>
+        <div class="acc-num">8 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">New Voter ID Registration</span>
+          <span class="stag">Voter ID Correction</span>
+          <span class="stag">Address Change</span>
+          <span class="stag">Duplicate EPIC सहायता</span>
+          <span class="stag">Voter ID Download</span>
+          <span class="stag">Voter List में नाम चेक</span>
+          <span class="stag">Voter ID Application Status</span>
+          <span class="stag">Electoral Roll Download</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">5. सरकारी भर्ती एवं नौकरी के फॉर्म</div>
+          <div class="acc-count">Government Job Recruitment Forms</div>
+        </div>
+        <div class="acc-num">18 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">MPESB Recruitment Form</span>
+          <span class="stag">MP Police Recruitment</span>
+          <span class="stag">MP Patwari Recruitment</span>
+          <span class="stag">Teacher Recruitment</span>
+          <span class="stag">SSC CGL / CHSL / MTS</span>
+          <span class="stag">UPSC Form</span>
+          <span class="stag">MPPSC Form</span>
+          <span class="stag">Railway Recruitment</span>
+          <span class="stag">Army / Agniveer Form</span>
+          <span class="stag">Navy Recruitment</span>
+          <span class="stag">Air Force Recruitment</span>
+          <span class="stag">India Post Recruitment</span>
+          <span class="stag">Banking Recruitment</span>
+          <span class="stag">Forest Guard Recruitment</span>
+          <span class="stag">Jail Prahari Recruitment</span>
+          <span class="stag">Anganwadi Recruitment</span>
+          <span class="stag">NHM Recruitment</span>
+          <span class="stag">अन्य सभी सरकारी भर्ती फॉर्म</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">6. परीक्षा एवं एडमिट कार्ड</div>
+          <div class="acc-count">Exam Form & Admit Card Services</div>
+        </div>
+        <div class="acc-num">10 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">Online Exam Form</span>
+          <span class="stag">Admit Card Download</span>
+          <span class="stag">Exam City Intimation</span>
+          <span class="stag">Answer Key Download</span>
+          <span class="stag">Result Download</span>
+          <span class="stag">Merit List Download</span>
+          <span class="stag">Counselling Registration</span>
+          <span class="stag">Exam Fee Payment</span>
+          <span class="stag">Application Correction</span>
+          <span class="stag">परीक्षा संबंधी दस्तावेज प्रिंट</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-landmark"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">7. MP Online एवं मध्य प्रदेश सेवाएँ</div>
+          <div class="acc-count">MP Online & Madhya Pradesh Government Services</div>
+        </div>
+        <div class="acc-num">16 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">MP Online Kiosk Services</span>
+          <span class="stag">MPESB Application</span>
+          <span class="stag">MPPSC Application</span>
+          <span class="stag">MP Rojgar Registration</span>
+          <span class="stag">MP Scholarship Portal</span>
+          <span class="stag">Samagra ID Services</span>
+          <span class="stag">Ladli Behna संबंधित आवेदन</span>
+          <span class="stag">मुख्यमंत्री जनकल्याण योजनाएँ</span>
+          <span class="stag">श्रमिक पंजीयन</span>
+          <span class="stag">सामाजिक सुरक्षा पेंशन</span>
+          <span class="stag">वृद्धावस्था पेंशन</span>
+          <span class="stag">विधवा पेंशन</span>
+          <span class="stag">दिव्यांग पेंशन</span>
+          <span class="stag">मुख्यमंत्री किसान कल्याण योजना</span>
+          <span class="stag">सरकारी योजनाओं का आवेदन</span>
+          <span class="stag">MP Online Certificate Services</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-users"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">8. समग्र ID सेवाएँ</div>
+          <div class="acc-count">Samagra ID Services</div>
+        </div>
+        <div class="acc-num">9 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">Samagra ID Download</span>
+          <span class="stag">परिवार ID Download</span>
+          <span class="stag">सदस्य ID Download</span>
+          <span class="stag">नया सदस्य जोड़ने की प्रक्रिया</span>
+          <span class="stag">सदस्य की जानकारी अपडेट</span>
+          <span class="stag">परिवार की जानकारी अपडेट</span>
+          <span class="stag">e-KYC सहायता</span>
+          <span class="stag">Samagra Status Check</span>
+          <span class="stag">Samagra ID Print</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-hard-hat"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">9. श्रम एवं रोजगार सेवाएँ</div>
+          <div class="acc-count">Labour & Employment Services</div>
+        </div>
+        <div class="acc-num">10 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">E-Shram Card</span>
+          <span class="stag">Labour Card Application</span>
+          <span class="stag">Labour Registration</span>
+          <span class="stag">Labour Card Renewal</span>
+          <span class="stag">श्रमिक योजना आवेदन</span>
+          <span class="stag">रोजगार पंजीयन</span>
+          <span class="stag">Employment Registration Renewal</span>
+          <span class="stag">Job Application</span>
+          <span class="stag">Job Portal Registration</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-train"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">10. रेलवे एवं यात्रा सेवाएँ</div>
+          <div class="acc-count">Railway & Travel Services</div>
+          <div class="acc-count">Railway & Travel Services</div>
+        </div>
+        <div class="acc-num">10 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">IRCTC Train Ticket Booking</span>
+          <span class="stag">Train Ticket Cancellation</span>
+          <span class="stag">Train PNR Status</span>
+          <span class="stag">Train Schedule</span>
+          <span class="stag">Railway Reservation</span>
+          <span class="stag">Bus Ticket Booking</span>
+          <span class="stag">Flight Ticket Booking</span>
+          <span class="stag">Hotel Booking</span>
+          <span class="stag">Passport Application Assistance</span>
+          <span class="stag">Visa Application Assistance</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-car"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">11. ड्राइविंग लाइसेंस एवं वाहन सेवाएँ</div>
+          <div class="acc-count">Driving Licence & Vehicle Services</div>
+        </div>
+        <div class="acc-num">12 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">Learning Licence Application</span>
+          <span class="stag">Driving Licence Application</span>
+          <span class="stag">DL Renewal</span>
+          <span class="stag">DL Duplicate</span>
+          <span class="stag">DL Correction</span>
+          <span class="stag">Driving Test Slot Booking</span>
+          <span class="stag">Vehicle Registration Details</span>
+          <span class="stag">RC Download</span>
+          <span class="stag">E-Challan Check</span>
+          <span class="stag">E-Challan Payment</span>
+          <span class="stag">Vehicle Tax Payment</span>
+          <span class="stag">Driving Licence Status</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-school"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">12. शिक्षा एवं स्कूल-कॉलेज सेवाएँ</div>
+          <div class="acc-count">Education & School-College Services</div>
+        </div>
+        <div class="acc-num">20 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">School Admission Form</span>
+          <span class="stag">College Admission Form</span>
+          <span class="stag">University Registration</span>
+          <span class="stag">Scholarship Form</span>
+          <span class="stag">NSP Scholarship</span>
+          <span class="stag">MP Scholarship</span>
+          <span class="stag">RTE Admission Form</span>
+          <span class="stag">Exam Registration</span>
+          <span class="stag">College Counselling</span>
+          <span class="stag">ABC ID / APAAR ID Assistance</span>
+          <span class="stag">Migration Certificate Application</span>
+          <span class="stag">Marksheet Download</span>
+          <span class="stag">Transfer Certificate Typing</span>
+          <span class="stag">Assignment Typing</span>
+          <span class="stag">Project Work</span>
+          <span class="stag">Online Result</span>
+          <span class="stag">Board Examination Form</span>
+          <span class="stag">Open School Admission</span>
+          <span class="stag">NIOS Admission</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-print"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">13. प्रिंटिंग एवं फोटोकॉपी सेवाएँ</div>
+          <div class="acc-count">Printing & Photocopy Services</div>
+        </div>
+        <div class="acc-num">15 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">Black & White Print</span>
+          <span class="stag">Colour Print</span>
+          <span class="stag">A4 Printing</span>
+          <span class="stag">A3 Printing</span>
+          <span class="stag">Legal Size Printing</span>
+          <span class="stag">Photocopy</span>
+          <span class="stag">Double Side Printing</span>
+          <span class="stag">Document Scanning</span>
+          <span class="stag">Photo Printing</span>
+          <span class="stag">Passport Size Photo</span>
+          <span class="stag">ID Card Printing</span>
+          <span class="stag">PVC Card Printing</span>
+          <span class="stag">Document Lamination</span>
+          <span class="stag">Spiral Binding</span>
+          <span class="stag">File Binding</span>
+          <span class="stag">Book Printing</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-file-pdf"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">14. PDF एवं डॉक्यूमेंट एडिटिंग</div>
+          <div class="acc-count">PDF & Document Editing Services</div>
+        </div>
+        <div class="acc-num">20 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">PDF to JPG</span>
+          <span class="stag">JPG to PDF</span>
+          <span class="stag">PDF Compress</span>
+          <span class="stag">PDF Merge</span>
+          <span class="stag">PDF Split</span>
+          <span class="stag">PDF Rotate</span>
+          <span class="stag">PDF Page Delete</span>
+          <span class="stag">PDF Page Rearrange</span>
+          <span class="stag">PDF Resize</span>
+          <span class="stag">PDF Crop</span>
+          <span class="stag">PDF Editing</span>
+          <span class="stag">Image Compress</span>
+          <span class="stag">Image Resize</span>
+          <span class="stag">Signature Resize</span>
+          <span class="stag">Photo Resize</span>
+          <span class="stag">Document Format Conversion</span>
+          <span class="stag">Word to PDF</span>
+          <span class="stag">Excel to PDF</span>
+          <span class="stag">PDF to Word</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-paint-brush"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">15. फोटो एवं ग्राफिक डिजाइनिंग</div>
+          <div class="acc-count">Photo Editing & Graphic Design Services</div>
+        </div>
+        <div class="acc-num">18 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">Passport Photo Editing</span>
+          <span class="stag">Background Remove</span>
+          <span class="stag">Background Change</span>
+          <span class="stag">Photo Retouching</span>
+          <span class="stag">Photo Collage</span>
+          <span class="stag">Wedding Card Design</span>
+          <span class="stag">Birthday Invitation</span>
+          <span class="stag">Visiting Card Design</span>
+          <span class="stag">Banner Design</span>
+          <span class="stag">Poster Design</span>
+          <span class="stag">Flex Design</span>
+          <span class="stag">Pamphlet Design</span>
+          <span class="stag">Logo Design</span>
+          <span class="stag">ID Card Design</span>
+          <span class="stag">Certificate Design</span>
+          <span class="stag">Social Media Post</span>
+          <span class="stag">YouTube Thumbnail</span>
+          <span class="stag">Photo Restoration</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-keyboard"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">16. कंप्यूटर एवं ऑनलाइन सेवाएँ</div>
+          <div class="acc-count">Computer & Online Services</div>
+        </div>
+        <div class="acc-num">16 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">Hindi Typing</span>
+          <span class="stag">English Typing</span>
+          <span class="stag">Data Entry</span>
+          <span class="stag">Resume / CV Making</span>
+          <span class="stag">Biodata Making</span>
+          <span class="stag">Application Writing</span>
+          <span class="stag">Letter Writing</span>
+          <span class="stag">Email Creation</span>
+          <span class="stag">Email Sending</span>
+          <span class="stag">Online Registration</span>
+          <span class="stag">Website Form Filling</span>
+          <span class="stag">Document Upload</span>
+          <span class="stag">Excel Data Entry</span>
+          <span class="stag">Word Document Formatting</span>
+          <span class="stag">PowerPoint Presentation</span>
+          <span class="stag">Online Meeting Assistance</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-passport"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">17. पासपोर्ट एवं विदेश संबंधी सेवाएँ</div>
+          <div class="acc-count">Passport & Foreign Travel Services</div>
+        </div>
+        <div class="acc-num">8 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">New Passport Application</span>
+          <span class="stag">Passport Renewal</span>
+          <span class="stag">Passport Reissue</span>
+          <span class="stag">Passport Appointment Booking</span>
+          <span class="stag">Passport Status Check</span>
+          <span class="stag">Visa Form Filling</span>
+          <span class="stag">Visa Appointment Assistance</span>
+          <span class="stag">विदेश यात्रा दस्तावेज प्रिंटिंग</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">18. बीमा एवं पेंशन सेवाएँ</div>
+          <div class="acc-count">Insurance & Pension Services</div>
+        </div>
+        <div class="acc-num">10 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">Life Insurance Application Assistance</span>
+          <span class="stag">Health Insurance Application Assistance</span>
+          <span class="stag">Vehicle Insurance</span>
+          <span class="stag">Insurance Renewal</span>
+          <span class="stag">PMJJBY</span>
+          <span class="stag">PMSBY</span>
+          <span class="stag">Atal Pension Yojana</span>
+          <span class="stag">NPS Registration Assistance</span>
+          <span class="stag">Pension Status Check</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 20 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-globe"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">19. अन्य सरकारी एवं सार्वजनिक सेवाएँ</div>
+          <div class="acc-count">Other Government & Public Services</div>
+        </div>
+        <div class="acc-num">14 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">RTI Application Assistance</span>
+          <span class="stag">CPGRAMS Complaint</span>
+          <span class="stag">Consumer Complaint</span>
+          <span class="stag">Online Grievance Registration</span>
+          <span class="stag">Court Case Status</span>
+          <span class="stag">सरकारी विभागों में ऑनलाइन शिकायत</span>
+          <span class="stag">बिजली कनेक्शन आवेदन</span>
+          <span class="stag">नया गैस कनेक्शन आवेदन</span>
+          <span class="stag">राशन कार्ड आवेदन</span>
+          <span class="stag">राशन कार्ड सदस्य अपडेट</span>
+          <span class="stag">आयुष्मान कार्ड पात्रता एवं अधिकृत प्रक्रिया</span>
+          <span class="stag">सरकारी योजना पात्रता चेक</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 21 -->
+    <div class="acc-item">
+      <div class="acc-head" onclick="toggle(this)">
+        <div class="acc-icon"><i class="fas fa-store"></i></div>
+        <div class="acc-info">
+          <div class="acc-title">20. दुकान की अन्य सेवाएँ</div>
+          <div class="acc-count">Additional Shop Services & Products</div>
+        </div>
+        <div class="acc-num">15 Services</div>
+        <div class="acc-arr"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="acc-body">
+        <div class="service-tags">
+          <span class="stag">स्टेशनरी बिक्री</span>
+          <span class="stag">Notebook एवं Register</span>
+          <span class="stag">Pen एवं Pencil</span>
+          <span class="stag">School Project Material</span>
+          <span class="stag">Chart Paper एवं Craft Items</span>
+          <span class="stag">File एवं Folder</span>
+          <span class="stag">Pen Drive बिक्री</span>
+          <span class="stag">Keyboard एवं Mouse</span>
+          <span class="stag">Mobile Accessories</span>
+          <span class="stag">Online Form Filling Assistance</span>
+          <span class="stag">फोटो एवं वीडियो एडिटिंग</span>
+          <span class="stag">स्कूल प्रोजेक्ट बनाना</span>
+          <span class="stag">Lamination एवं Binding</span>
+          <span class="stag">ऑनलाइन शॉपिंग ऑर्डर सहायता</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /acc-wrap -->
+
+  <!-- Call CTA -->
+  <div style="margin-top:2rem;background:linear-gradient(135deg,var(--cyan),#004d40);
+    border-radius:18px;padding:1.8rem 2rem;display:flex;align-items:center;
+    justify-content:space-between;gap:1.5rem;flex-wrap:wrap;color:#fff;">
+    <div>
+      <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.3rem;">💻 Koi bhi online kaam karana ho?</h3>
+      <p style="font-size:.84rem;opacity:.88;">Seedha aao ya call karo — expert staff turant help karega. No appointment needed!</p>
+    </div>
+    <div style="display:flex;gap:.8rem;flex-wrap:wrap;">
+      <a href="tel:09179818444" style="background:#fff;color:var(--cyan);padding:11px 22px;
+        border-radius:50px;font-weight:700;text-decoration:none;font-size:.88rem;
+        display:inline-flex;align-items:center;gap:7px;">
+        <i class="fas fa-phone"></i> 091798 18444
+      </a>
+      <a href="https://chat.whatsapp.com/DnC0Umg3ME4BcOllzGwcHL" target="_blank"
+        style="background:#25D366;color:#fff;padding:11px 22px;
+        border-radius:50px;font-weight:700;text-decoration:none;font-size:.88rem;
+        display:inline-flex;align-items:center;gap:7px;">
+        <i class="fab fa-whatsapp"></i> WhatsApp Group
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <span class="section-tag">Gallery</span>
+  <h2 class="section-title">Hamari <span>Dukaan Ki Jhalak</span></h2>
+  <p class="section-sub">Stationery, cyber cafe, printing — aao aur dekhte hao humara well-stocked, modern store.</p>
+  <div class="gal-grid">
+    <div class="gal-item"><div class="gal-inner"><i class="fas fa-pencil-ruler"></i><span>Stationery</span></div></div>
+    <div class="gal-item"><div class="gal-inner"><i class="fas fa-palette"></i><span>Art Supplies</span></div></div>
+    <div class="gal-item"><div class="gal-inner"><i class="fas fa-laptop"></i><span>Cyber Cafe</span></div></div>
+    <div class="gal-item"><div class="gal-inner"><i class="fas fa-id-card"></i><span>Online Services</span></div></div>
+    <div class="gal-item"><div class="gal-inner"><i class="fas fa-print"></i><span>Printing</span></div></div>
+    <div class="gal-item"><div class="gal-inner"><i class="fas fa-image"></i><span>Gallery Frames</span></div></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <span class="section-tag">Customer Reviews</span>
+  <h2 class="section-title">Customers Ki <span>Baatein</span></h2>
+  <p class="section-sub">4.8 ⭐ Google rating ke saath — Jamtara ka sabse trusted store. Yahan padho kya kehte hain hamare customers.</p>
+  <div class="rev-grid">
+    <div class="rev-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">"PAN card aur Aadhaar update ka kaam ek saath ho gaya, bahut jaldi! Staff bahut helpful hai. Pradeep ji ka store best hai area mein."</p>
+      <div class="t-auth"><div class="t-av">R</div><div><div class="t-name">Rahul Sharma</div><div class="t-loc">Jamtara, MP</div></div></div>
+    </div>
+    <div class="rev-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">"Mere bacche ka college admission form yahan bhara, Ladli Behna form bhi yahan se hua. Bahut acha service hai, bilkul sahi!"</p>
+      <div class="t-auth"><div class="t-av">P</div><div><div class="t-name">Priya Verma</div><div class="t-loc">Bilhari, Jabalpur</div></div></div>
+    </div>
+    <div class="rev-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">"IRCTC ticket booking se lekar sarkari form tak — sab kaam yahan hota hai. Stationery ki quality bhi best hai. 5 star zaroor!"</p>
+      <div class="t-auth"><div class="t-av">S</div><div><div class="t-name">Sunita Patel</div><div class="t-loc">Gour Nadi, Jabalpur</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <span class="section-tag">Humse Miliye</span>
+  <h2 class="section-title">Hum Se <span>Sampark Karein</span></h2>
+  <p class="section-sub">Store par aao, call karo, ya WhatsApp karo — subah 9 baje se sham 9 baje tak available hain!</p>
+  <div class="contact-grid">
+    <div class="c-info">
+      <div class="c-item">
+        <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div><h4>Address / Pata</h4><p>Shop No.1, Gour Nadi, near Jabalpur, Bilhari,<br>Jabalpur, Jamtara, Madhya Pradesh 482021</p></div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon"><i class="fas fa-user-tie"></i></div>
+        <div><h4>Shop Owner / Proprietor</h4><p>Pradeep Kanojiya</p></div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon"><i class="fas fa-phone"></i></div>
+        <div><h4>Phone Number</h4><a href="tel:09179818444">091798 18444</a></div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon wa"><i class="fab fa-whatsapp"></i></div>
+        <div><h4>WhatsApp</h4>
+          <a href="https://wa.me/919179818444" target="_blank">Message on WhatsApp</a><br>
+          <a href="https://chat.whatsapp.com/DnC0Umg3ME4BcOllzGwcHL" target="_blank" style="font-size:.8rem;color:var(--green);">📢 Join WhatsApp Group</a>
+        </div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon"><i class="fas fa-clock"></i></div>
+        <div><h4>Working Hours / Timing</h4><p>Monday – Sunday<br><strong>Subah 9:00 AM – Sham 9:00 PM</strong></p></div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon c"><i class="fas fa-laptop"></i></div>
+        <div><h4>Cyber Cafe & Online Services</h4><p>21 Categories • 300+ Services<br>No appointment needed!</p></div>
+      </div>
+    </div>
+    <div class="c-form">
+      <h3>📩 Koi Sawaal? Message Karo!</h3>
+      <form onsubmit="handleSubmit(event)">
+        <div class="fr">
+          <div class="fg"><label>Aapka Naam</label><input type="text" placeholder="Your name" required/></div>
+          <div class="fg"><label>Phone Number</label><input type="tel" placeholder="Mobile no." required/></div>
+        </div>
+        <div class="fg">
+          <label>Kya Kaam Chahiye?</label>
+          <select>
+            <option>Aadhaar Card Work</option>
+            <option>PAN Card Apply</option>
+            <option>सरकारी प्रमाण पत्र</option>
+            <option>सरकारी भर्ती / Job Form</option>
+            <option>Voter ID Services</option>
+            <option>MP Online / Samagra</option>
+            <option>Railway / Travel Ticket</option>
+            <option>Driving Licence Work</option>
+            <option>Printing / Lamination</option>
+            <option>PDF / Document Editing</option>
+            <option>Photo / Graphic Design</option>
+            <option>Passport / Visa Work</option>
+            <option>Stationery / Gallery Items</option>
+            <option>Banking / Bill Payment</option>
+            <option>Kuch Aur (mention below)</option>
+          </select>
+        </div>
+        <div class="fg"><label>Message</label><textarea placeholder="Apni zaroorat yahan likhein..."></textarea></div>
+        <button type="submit" class="btn-sub"><i class="fas fa-paper-plane"></i> Message Bhejo</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-sec">
+  <div class="map-box">
+    <div>
+      <h3><i class="fas fa-map-marker-alt"></i> Google Maps Par Dhundhein</h3>
+      <p>Shop No.1, Gour Nadi, near Jabalpur, Bilhari, Jabalpur, Jamtara, Madhya Pradesh 482021</p>
+    </div>
+    <a href="https://maps.google.com/?q=R+K+Gallery+And+Stationers+Jamtara+Madhya+Pradesh" target="_blank" class="map-btn">
+      <i class="fas fa-directions"></i> Get Directions
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:.5rem;">
+        <img src="logo.png" alt="Logo" style="height:46px;width:46px;border-radius:9px;object-fit:contain;background:rgba(255,255,255,.1);"/>
+        <div>
+          <div style="font-size:.95rem;font-weight:700;color:#fff;">R K Gallery & Stationers</div>
+          <div style="font-size:.62rem;color:#ffd180;font-weight:600;">Cyber Cafe • Online Services • Jamtara, MP</div>
+        </div>
+      </div>
+      <p class="ft-desc">Jamtara ka sabse trusted store — 21 categories mein 300+ online services, stationery, gallery, aur printing.<br><strong style="color:#fff;">Proprietor: Pradeep Kanojiya</strong></p>
+      <div class="soc">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/919179818444" class="wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://chat.whatsapp.com/DnC0Umg3ME4BcOllzGwcHL" class="wa" target="_blank" title="WhatsApp Group"><i class="fas fa-users"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="tel:09179818444"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="ft-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#stationery">Stationery</a></li>
+        <li><a href="#allservices">Online Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact Info</h4>
+      <div class="ft-ci">
+        <div class="ft-ci-item"><i class="fas fa-phone"></i> 091798 18444</div>
+        <div class="ft-ci-item"><i class="fas fa-map-marker-alt"></i> Shop No.1, Gour Nadi, Bilhari, Jabalpur, MP 482021</div>
+        <div class="ft-ci-item"><i class="fas fa-clock"></i> Daily: 9:00 AM – 9:00 PM</div>
+        <div class="ft-ci-item"><i class="fas fa-star"></i> Google: 4.8 ⭐ Rating</div>
+        <div class="ft-ci-item"><i class="fas fa-laptop" style="color:#4dd0e1;"></i> 21 Categories • 300+ Services</div>
+        <div class="ft-ci-item">
+          <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+          <a href="https://chat.whatsapp.com/DnC0Umg3ME4BcOllzGwcHL" target="_blank">Join WhatsApp Group</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    © 2026 R K Gallery And Stationers | Proprietor: Pradeep Kanojiya | Shop No.1, Gour Nadi, Jamtara, Madhya Pradesh
+  </div>
+</footer>
+
+<!-- FLOATING NOTIFICATION BELL -->
+<button class="notif-bell-float" id="notifBellFloat" onclick="toggleNotifToast()" title="Daily Job Alerts">
+  <i class="fas fa-bell"></i>
+  <span class="notif-bell-dot"></span>
+</button>
+
+<!-- NOTIFICATION TOAST POPUP -->
+<div class="notif-toast" id="notifToast">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+    <h4>🔔 Daily Job Alert</h4>
+    <button onclick="toggleNotifToast()" style="border:none;background:none;cursor:pointer;color:var(--muted);font-size:0.9rem;">✕</button>
+  </div>
+  <p>Jab bhi koi naya form, admit card ya sarkari yojana aayegi, seedha mobile par notification paayein!</p>
+  <div class="notif-toast-btns">
+    <button class="btn-notif-allow" onclick="requestNotificationPermission()" style="padding:7px 14px;font-size:0.76rem;">Alert On Karein</button>
+    <a href="https://chat.whatsapp.com/DnC0Umg3ME4BcOllzGwcHL" target="_blank" class="btn-notif-wa" style="padding:7px 12px;font-size:0.76rem;">WhatsApp Group</a>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+  // Mobile menu
+  function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+
+  // Filter Alerts
+  function filterAlerts(category, btn) {
+    document.querySelectorAll('.alert-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    const cards = document.querySelectorAll('.job-card');
+    cards.forEach(card => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Toggle Notification Toast
+  function toggleNotifToast() {
+    const toast = document.getElementById('notifToast');
+    toast.classList.toggle('show');
+  }
+
+  // Request Web Push Notification Permission
+  function requestNotificationPermission() {
+    if (!("Notification" in window)) {
+      alert("Aapka browser push notification support nahi karta. Kripya hamare WhatsApp Group se judein!");
+      window.open('https://chat.whatsapp.com/DnC0Umg3ME4BcOllzGwcHL', '_blank');
+      return;
+    }
+
+    Notification.requestPermission().then(permission => {
+      if (permission === "granted") {
+        try {
+          new Notification("R K Gallery & Stationers | Jamtara", {
+            body: "🎉 Mobile Alerts Active! Ab har nayi job, admit card aur sarkari update seedha aapke mobile par aayega.",
+            icon: "logo.png"
+          });
+        } catch (e) {
+          console.log("Notification shown");
+        }
+
+        // Update Buttons
+        document.querySelectorAll('.btn-notif-allow').forEach(btn => {
+          btn.innerHTML = '<i class="fas fa-check-circle"></i> Alerts Active!';
+          btn.style.background = '#2e7d32';
+        });
+
+        const toast = document.getElementById('notifToast');
+        if (toast) {
+          toast.innerHTML = '<div style="color:#2e7d32;font-weight:700;"><i class="fas fa-check-circle"></i> Mobile Alerts Chalu Ho Gaye!</div><p style="font-size:0.78rem;margin-top:4px;">Naye update aane par aapko notification mil jayega.</p>';
+          setTimeout(() => toast.classList.remove('show'), 4000);
+        }
+      } else {
+        alert("Notification block hai. Aap WhatsApp Group join karke updates paa sakte hain!");
+        window.open('https://chat.whatsapp.com/DnC0Umg3ME4BcOllzGwcHL', '_blank');
+      }
+    });
+  }
+
+  // Show Toast after 4 seconds on first visit
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      if (window.Notification && Notification.permission !== "granted") {
+        const toast = document.getElementById('notifToast');
+        if (toast) toast.classList.add('show');
+      }
+    }, 4000);
+  });
+
+  // Accordion
+  function toggle(head){
+    const body = head.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+    document.querySelectorAll('.acc-body.open').forEach(b=>b.classList.remove('open'));
+    document.querySelectorAll('.acc-head.open').forEach(h=>h.classList.remove('open'));
+    if(!isOpen){ body.classList.add('open'); head.classList.add('open'); }
+  }
+
+  // Auto-open first
+  window.addEventListener('DOMContentLoaded',()=>{
+    const first = document.querySelector('.acc-head');
+    if(first) toggle(first);
+  });
+
+  // Scroll top
+  window.addEventListener('scroll',()=>{
+    document.getElementById('scrollTop').classList.toggle('show',window.scrollY>300);
+    document.getElementById('navbar').style.boxShadow =
+      window.scrollY>20?'0 4px 24px rgba(26,35,126,.14)':'0 2px 16px rgba(26,35,126,.08)';
+  });
+
+  // Form
+  function handleSubmit(e){
+    e.preventDefault();
+    const btn=e.target.querySelector('.btn-sub');
+    btn.innerHTML='<i class="fas fa-check"></i> Bheja Gaya! Hum jaldi contact karenge.';
+    btn.style.background='#2e7d32';
+    setTimeout(()=>{btn.innerHTML='<i class="fas fa-paper-plane"></i> Message Bhejo';btn.style.background='';e.target.reset();},3000);
+  }
+
+  // Animate on scroll
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)';}});
+  },{threshold:0.1});
+  document.querySelectorAll('.s-card,.acc-item,.rev-card,.c-item,.job-card').forEach(el=>{
+    el.style.opacity=0;el.style.transform='translateY(20px)';
+    el.style.transition='opacity .5s ease,transform .5s ease';obs.observe(el);
+  });
+</script>
+</body>
+</html>

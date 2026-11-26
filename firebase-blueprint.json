@@ -1,0 +1,130 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Authenticated customer profile and alert preferences for R K Gallery & Stationers",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth UID of the user"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User display name from Google account"
+        },
+        "email": {
+          "type": "string",
+          "description": "Optional user email address"
+        },
+        "alertsEnabled": {
+          "type": "boolean",
+          "description": "Whether job and yojana alert notifications are enabled"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when profile was created (FieldValue.serverTimestamp())"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when profile was last updated (FieldValue.serverTimestamp())"
+        }
+      },
+      "required": ["userId", "displayName", "alertsEnabled", "createdAt", "updatedAt"]
+    },
+    "ServiceInquiry": {
+      "title": "ServiceInquiry",
+      "description": "Customer service or form inquiry submitted to R K Gallery & Stationers",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth UID of the inquiry owner"
+        },
+        "customerName": {
+          "type": "string",
+          "description": "Customer full name (2-80 characters)"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Customer mobile number (10-20 characters)"
+        },
+        "serviceName": {
+          "type": "string",
+          "description": "Selected online service or stationery category"
+        },
+        "message": {
+          "type": "string",
+          "description": "Optional inquiry details or document notes"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["OPEN", "CONTACTED", "COMPLETED"],
+          "description": "Inquiry progress status"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server creation timestamp (FieldValue.serverTimestamp())"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server update timestamp (FieldValue.serverTimestamp())"
+        }
+      },
+      "required": ["userId", "customerName", "phone", "serviceName", "status", "createdAt", "updatedAt"]
+    },
+    "SavedBookmark": {
+      "title": "SavedBookmark",
+      "description": "Saved service or job alert bookmarked by the user",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth UID of the bookmark owner"
+        },
+        "itemTitle": {
+          "type": "string",
+          "description": "Title of the saved service or job alert"
+        },
+        "categoryTitle": {
+          "type": "string",
+          "description": "Category label for the saved item"
+        },
+        "itemType": {
+          "type": "string",
+          "enum": ["SERVICE", "ALERT"],
+          "description": "Kind of bookmarked item"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server creation timestamp (FieldValue.serverTimestamp())"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server update timestamp (FieldValue.serverTimestamp())"
+        }
+      },
+      "required": ["userId", "itemTitle", "categoryTitle", "itemType", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "User profile and alert preference document scoped by Auth UID"
+    },
+    "/users/{userId}/inquiries/{inquiryId}": {
+      "schema": { "$ref": "#/entities/ServiceInquiry" },
+      "description": "Customer service inquiries owned by the authenticated user"
+    },
+    "/users/{userId}/bookmarks/{bookmarkId}": {
+      "schema": { "$ref": "#/entities/SavedBookmark" },
+      "description": "Bookmarked services and job alerts owned by the authenticated user"
+    }
+  }
+}
